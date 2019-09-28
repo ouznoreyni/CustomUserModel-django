@@ -1,0 +1,5 @@
+*.pyc
+accounts/__pycache__
+profiles/__pycache__/
+accounts/migrations/__pycache__/
+

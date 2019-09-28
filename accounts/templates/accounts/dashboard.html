@@ -1,0 +1,13 @@
+{% extends "./layouts/base.html" %}
+
+{% block title %}
+  home
+{% endblock title %}
+
+{% block content %}
+  <div class="container">
+    <h1 class="center">Dashboard</h1>
+    <h3>utilisateur: {{ request.user.first_name}} {{ request.user.last_name}}</h3>
+    {% lorem 3 p %}
+  </div>
+{% endblock content %}

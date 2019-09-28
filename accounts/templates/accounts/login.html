@@ -1,0 +1,25 @@
+{% extends "./layouts/base.html" %}
+{% block title %}
+  login
+{% endblock title %}
+
+{% block content %}
+  <div class="container-fluid center">
+    <h1>login</h1>
+    <form action="" method="post" class="col-4 was-validated" >
+      {% csrf_token %}
+      {% comment %}
+         {{form.as_p}}
+      {% endcomment %}
+      <div class="form-group">
+        <label for="email">votre email</label>
+        <input id="email" class="form-control" type="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">votre mot de passe</label>
+        <input id="password" class="form-control" type="password" name="password" required>
+      </div>
+      <input type="submit" class="btn btn-primary" value="connecter">
+    </form>
+  </div>
+{% endblock content %}

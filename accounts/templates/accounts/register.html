@@ -1,0 +1,35 @@
+{% extends "./layouts/base.html" %}
+
+{% block title %}
+  
+{% endblock title %}
+
+{% block content %}
+  <div class="container-fluid">
+    <h1>register</h1>
+    <form action="{% url  'accounts:register' %}" class="col-4 was-validated" method="post">
+     {% csrf_token %}  
+      <div class="form-group">
+        <label for="email">votre email</label>
+        <input id="email" class="form-control" type="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="prenom">votre prenom</label>
+        <input id="prenom" class="form-control" type="text" name="prenom" required>
+      </div>
+      <div class="form-group">
+        <label for="nom">votre nom</label>
+        <input id="nom" class="form-control" type="text" name="nom" required>
+      </div>
+      <div class="form-group">
+        <label for="password">votre mot de passe</label>
+        <input id="password" class="form-control" type="password" name="password" required>
+      </div>
+      <div class="form-group">
+        <label for="password2">confirmer votre mot de passe</label>
+        <input id="password2" class="form-control" type="password" name="password2" required>
+      </div>
+      <input type="submit" class="btn btn-success" value="Creer un compte">
+    </form>
+  </div>
+{% endblock content %}
